@@ -74,7 +74,7 @@ function HeroAnimations() {
           alt="Leafy Green"
         />
         <motion.img 
-          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Corn.png" 
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Maize.png" 
           className="contained-item"
           animate={bucketActive ? { x: 130, y: -100, rotate: 20, scale: 0.8 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
           transition={spring}
