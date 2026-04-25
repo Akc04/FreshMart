@@ -25,6 +25,7 @@ export default function Navbar() {
               <span className="deals-emoji">🔥</span>
               Deals
             </Link>
+            <Link href="/orders" className="nav-link">Orders</Link>
           </div>
         </div>
 
