@@ -18,7 +18,10 @@ export default function Navbar() {
 
         <div className="nav-links">
           <Link href="/" className="nav-link">Shop</Link>
-          <Link href="/deals" className="nav-link">🔥 Deals</Link>
+          <Link href="/deals" className="nav-link">
+            <span style={{ fontSize: '1.1em', marginRight: '4px', display: 'inline-block' }}>🔥</span>
+            Deals
+          </Link>
           <Link href="/orders" className="nav-link">Orders</Link>
 
           <Link href="/wishlist" className="nav-icon-btn" id="nav-wishlist" aria-label="Wishlist">
