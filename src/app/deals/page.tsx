@@ -63,7 +63,8 @@ function DealsHeroAnimations() {
           transition={spring}
           alt="Candy"
         />
-        <span className="container-emoji" style={{ fontSize: '12rem' }}>🎁</span>
+        <span className="container-emoji" style={{ fontSize: '7.8rem', position: 'relative', zIndex: 2 }}>🎁</span>
+        <span className="container-emoji" style={{ fontSize: '3.6rem', position: 'absolute', bottom: '-10px', left: '-30px', zIndex: 1 }}>🎁</span>
       </div>
     </div>
   );
