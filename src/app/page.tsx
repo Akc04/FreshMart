@@ -19,6 +19,8 @@ const PROMO_CODES: Record<string, number> = {
 function HeroAnimations() {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isBucketClicked, setIsBucketClicked] = useState(false);
+  const [isCartClicked, setIsCartClicked] = useState(false);
   const [isBucketHovered, setIsBucketHovered] = useState(false);
   const [isCartHovered, setIsCartHovered] = useState(false);
 
@@ -30,6 +32,9 @@ function HeroAnimations() {
   }, [scrollY]);
 
   const spring = { type: 'spring' as const, stiffness: 200, damping: 20 };
+  
+  const bucketActive = isBucketClicked || isBucketHovered || isScrolled;
+  const cartActive = isCartClicked || isCartHovered || isScrolled;
 
   return (
     <div className="interactive-hero-graphics">
@@ -38,27 +43,42 @@ function HeroAnimations() {
         className="graphics-group bucket-group"
         onMouseEnter={() => setIsBucketHovered(true)}
         onMouseLeave={() => setIsBucketHovered(false)}
+        onClick={() => setIsBucketClicked(!isBucketClicked)}
       >
         <motion.img 
           src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Broccoli.png" 
           className="contained-item"
-          animate={(isBucketHovered || isScrolled) ? { x: -100, y: -150, rotate: -25, scale: 0.9 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
+          animate={bucketActive ? { x: -120, y: -160, rotate: -25, scale: 0.9 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
           transition={spring}
           alt="Broccoli"
         />
         <motion.img 
           src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Carrot.png" 
           className="contained-item"
-          animate={(isBucketHovered || isScrolled) ? { x: 80, y: -180, rotate: 35, scale: 0.85 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
+          animate={bucketActive ? { x: 100, y: -180, rotate: 35, scale: 0.85 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
           transition={spring}
           alt="Carrot"
         />
         <motion.img 
           src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Tomato.png" 
           className="contained-item"
-          animate={(isBucketHovered || isScrolled) ? { x: -30, y: -210, rotate: 15, scale: 0.85 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
+          animate={bucketActive ? { x: -40, y: -230, rotate: 15, scale: 0.85 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
           transition={spring}
           alt="Tomato"
+        />
+        <motion.img 
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Leafy%20Green.png" 
+          className="contained-item"
+          animate={bucketActive ? { x: -140, y: -80, rotate: -15, scale: 0.8 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
+          transition={spring}
+          alt="Leafy Green"
+        />
+        <motion.img 
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Corn.png" 
+          className="contained-item"
+          animate={bucketActive ? { x: 130, y: -100, rotate: 20, scale: 0.8 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
+          transition={spring}
+          alt="Corn"
         />
         <span className="container-emoji">🧺</span>
       </div>
@@ -68,27 +88,42 @@ function HeroAnimations() {
         className="graphics-group cart-group"
         onMouseEnter={() => setIsCartHovered(true)}
         onMouseLeave={() => setIsCartHovered(false)}
+        onClick={() => setIsCartClicked(!isCartClicked)}
       >
         <motion.img 
           src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Baguette%20Bread.png" 
           className="contained-item"
-          animate={(isCartHovered || isScrolled) ? { x: 120, y: -130, rotate: 45, scale: 1.0 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
+          animate={cartActive ? { x: 140, y: -130, rotate: 45, scale: 1.0 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
           transition={spring}
           alt="Bread"
         />
         <motion.img 
           src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Cheese%20Wedge.png" 
           className="contained-item"
-          animate={(isCartHovered || isScrolled) ? { x: 40, y: -200, rotate: -15, scale: 0.85 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
+          animate={cartActive ? { x: 50, y: -230, rotate: -15, scale: 0.85 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
           transition={spring}
           alt="Cheese"
         />
         <motion.img 
           src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Glass%20of%20Milk.png" 
           className="contained-item"
-          animate={(isCartHovered || isScrolled) ? { x: -90, y: -170, rotate: -20, scale: 0.85 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
+          animate={cartActive ? { x: -110, y: -190, rotate: -20, scale: 0.85 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
           transition={spring}
           alt="Milk"
+        />
+        <motion.img 
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Egg.png" 
+          className="contained-item"
+          animate={cartActive ? { x: -140, y: -100, rotate: 10, scale: 0.7 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
+          transition={spring}
+          alt="Egg"
+        />
+        <motion.img 
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Butter.png" 
+          className="contained-item"
+          animate={cartActive ? { x: 150, y: -190, rotate: -10, scale: 0.8 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
+          transition={spring}
+          alt="Butter"
         />
         <span className="container-emoji">🛒</span>
       </div>
