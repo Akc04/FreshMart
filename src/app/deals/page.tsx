@@ -34,7 +34,7 @@ function DealsHeroAnimations() {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: [0, 600], opacity: [0, 0.2, 0] }}
           transition={{ duration: 8, repeat: Infinity, delay: tag.delay, ease: 'linear' }}
-          style={{ position: 'absolute', ...tag, fontSize: '2rem', zIndex: 0 }}
+          style={{ position: 'absolute', ...tag, fontSize: '2.5rem', zIndex: 0 }}
         >
           {tag.emoji}
         </motion.div>
@@ -43,14 +43,14 @@ function DealsHeroAnimations() {
       {/* Gift Box and Products */}
       <div className="graphics-group gift-group">
         <motion.img 
-          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Dark%20Chocolate.png" 
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Chocolate%20Bar.png" 
           className="contained-item"
           animate={isHovered ? { x: -120, y: -180, rotate: -20, scale: 1.1 } : { x: 0, y: 0, rotate: 0, scale: 0.3 }}
           transition={spring}
           alt="Chocolate"
         />
         <motion.img 
-          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Cold%20Brew.png" 
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Beverage%20Box.png" 
           className="contained-item"
           animate={isHovered ? { x: 120, y: -150, rotate: 20, scale: 1.2 } : { x: 0, y: 0, rotate: 0, scale: 0.3 }}
           transition={spring}
