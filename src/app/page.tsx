@@ -5,6 +5,8 @@ import { products as allProducts, categories as allCategories } from '@/data/pro
 import ProductCard from '@/components/ProductCard';
 import { Search, Leaf, SlidersHorizontal, Tag } from 'lucide-react';
 
+import { motion, useScroll, useTransform } from 'framer-motion';
+
 const ALL = 'All';
 type SortOption = 'default' | 'price-asc' | 'price-desc' | 'name-asc';
 
@@ -13,6 +15,39 @@ const PROMO_CODES: Record<string, number> = {
   SAVE20: 20,
   FIRSTORDER: 15,
 };
+
+function HeroAnimations() {
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 500], [0, 150]);
+  const y2 = useTransform(scrollY, [0, 500], [0, -100]);
+  const y3 = useTransform(scrollY, [0, 500], [0, 200]);
+  const y4 = useTransform(scrollY, [0, 500], [0, -150]);
+  
+  // 3D Fluent Emojis for realistic looks
+  const items = [
+    { src: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Broccoli.png', style: { top: '10%', left: '5%', width: '120px' }, y: y1 },
+    { src: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Red%20Apple.png', style: { top: '20%', right: '10%', width: '100px' }, y: y2 },
+    { src: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Carrot.png', style: { bottom: '15%', left: '15%', width: '110px' }, y: y3 },
+    { src: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Baguette%20Bread.png', style: { bottom: '25%', right: '5%', width: '140px' }, y: y4 },
+    { src: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Cheese%20Wedge.png', style: { top: '5%', left: '45%', width: '90px' }, y: y1 },
+  ];
+
+  return (
+    <div className="hero-animation-container">
+      {items.map((item, idx) => (
+        <motion.img
+          key={idx}
+          src={item.src}
+          className="floating-item"
+          style={{ ...item.style, y: item.y }}
+          animate={{ y: [0, -15, 0], rotate: [0, 5, -5, 0] }}
+          transition={{ duration: 4 + idx, repeat: Infinity, ease: 'easeInOut' }}
+          alt="Grocery Item"
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function HomePage() {
   const [filtered, setFiltered]     = useState<Product[]>(allProducts);
@@ -50,7 +85,8 @@ export default function HomePage() {
   return (
     <div className="page-wrapper">
       {/* Hero */}
-      <section className="hero">
+      <section className="hero" style={{ position: 'relative' }}>
+        <HeroAnimations />
         <div className="hero-content">
           <div className="hero-pill"><Leaf size={13} /> Fresh Produce Daily</div>
           <h1>Groceries delivered<br />to your door 🛒</h1>

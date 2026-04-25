@@ -5,6 +5,7 @@ import { WishlistProvider } from '@/context/WishlistContext';
 import { ToastProvider } from '@/context/ToastContext';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import FloatingCart from '@/components/FloatingCart';
 
 export const metadata: Metadata = {
   title: 'FreshMart — Online Grocery Store',
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Navbar />
               <main>{children}</main>
               <Footer />
+              <FloatingCart />
             </ToastProvider>
           </WishlistProvider>
         </CartProvider>
