@@ -553,3 +553,22 @@ img { display: block; }
 .footer-social a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--slate-100); border-radius: 50%; color: var(--slate-500); transition: all var(--transition); }
 .footer-social a:hover { background: var(--green-100); color: var(--green-600); transform: translateY(-2px); }
 .footer-bottom { max-width: 1280px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid var(--slate-100); text-align: center; color: var(--slate-400); font-size: 0.85rem; }
+
+/* ── Floating Cart ────────────────────────────────────────────────────────── */
+.floating-cart { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000; background: white; border-radius: 100px; padding: 8px 8px 8px 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05); display: flex; align-items: center; gap: 24px; width: max-content; max-width: calc(100vw - 48px); }
+.floating-cart-inner { display: flex; align-items: center; justify-content: space-between; width: 100%; gap: 24px; }
+.floating-cart-info { display: flex; align-items: center; gap: 16px; }
+.floating-cart-badge { position: relative; color: var(--slate-800); display: flex; align-items: center; justify-content: center; }
+.floating-cart-count { position: absolute; top: -8px; right: -10px; background: var(--red-500); color: white; font-size: 0.7rem; font-weight: 700; width: 18px; height: 18px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; }
+.floating-cart-text { display: flex; flex-direction: column; }
+.fc-title { font-size: 0.85rem; font-weight: 500; color: var(--slate-500); }
+.fc-price { font-size: 1.1rem; font-weight: 700; color: var(--slate-900); }
+.floating-cart-btn { background: var(--green-500); color: white; padding: 12px 24px; border-radius: 100px; font-weight: 600; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; text-decoration: none; transition: all 0.2s ease; }
+.floating-cart-btn:hover { background: var(--green-600); transform: translateY(-2px); }
+
+/* ── Interactive Hero Graphics ────────────────────────────────────────────── */
+.interactive-hero-graphics { position: absolute; top: 0; right: 0; width: 450px; height: 100%; z-index: 1; display: flex; align-items: flex-end; justify-content: center; gap: 40px; padding-bottom: 20px; cursor: pointer; }
+.graphics-group { position: relative; display: flex; align-items: flex-end; justify-content: center; }
+.container-emoji { font-size: 7rem; line-height: 1; position: relative; z-index: 2; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2)); user-select: none; }
+.contained-item { position: absolute; width: 90px; z-index: 1; bottom: 30px; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.3)); pointer-events: none; }
+@media (max-width: 768px) { .interactive-hero-graphics { display: none; } }
