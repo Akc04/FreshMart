@@ -590,26 +590,35 @@ img { display: block; }
 
 @media (max-width: 768px) {
   .navbar-inner {
-    padding: 0 12px;
-    gap: 8px;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
   }
   .nav-links {
-    gap: 12px;
+    display: contents; /* Allows children to be grid items of navbar-inner */
   }
   .logo {
+    grid-column: 1;
     font-size: 1.1rem;
     gap: 4px;
+    white-space: nowrap;
+  }
+  .nav-links > a:not(.cart-btn):not(.nav-icon-btn) {
+    grid-column: 2;
+    justify-self: center;
+    font-size: 0.85rem;
+  }
+  #nav-wishlist {
+    display: none; /* Hide wishlist in main navbar on mobile to save space */
   }
   .cart-btn {
+    grid-column: 3;
     padding: 6px 12px;
     font-size: 0.8rem;
-    gap: 4px;
-  }
-  .cart-btn span {
-    display: none; /* Hide "Cart" text on small screens to save space */
-  }
-  .cart-btn svg {
-    margin-right: 0;
+    width: fit-content;
+    justify-self: end;
   }
   
   .hero { 
