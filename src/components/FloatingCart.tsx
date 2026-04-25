@@ -5,13 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 export default function FloatingCart() {
-  const { state } = useCart();
-  const itemCount = state.items.reduce((total, item) => total + item.quantity, 0);
-  const totalPrice = state.items.reduce((total, item) => total + item.product.price * item.quantity, 0);
+  const { totalItems, subtotal } = useCart();
 
   return (
     <AnimatePresence>
-      {itemCount > 0 && (
+      {totalItems > 0 && (
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -23,11 +21,11 @@ export default function FloatingCart() {
             <div className="floating-cart-info">
               <div className="floating-cart-badge">
                 <ShoppingCart size={20} />
-                <span className="floating-cart-count">{itemCount}</span>
+                <span className="floating-cart-count">{totalItems}</span>
               </div>
               <div className="floating-cart-text">
-                <span className="fc-title">{itemCount} item{itemCount > 1 ? 's' : ''} in cart</span>
-                <span className="fc-price">₹{totalPrice}</span>
+                <span className="fc-title">{totalItems} item{totalItems > 1 ? 's' : ''} in cart</span>
+                <span className="fc-price">₹{subtotal}</span>
               </div>
             </div>
             <Link href="/cart" className="floating-cart-btn">
