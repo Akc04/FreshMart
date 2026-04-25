@@ -119,7 +119,7 @@ function HeroAnimations() {
           alt="Egg"
         />
         <motion.img 
-          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Butter.png" 
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Food/Butter%20Plate.png" 
           className="contained-item"
           animate={cartActive ? { x: 150, y: -190, rotate: -10, scale: 0.8 } : { x: 0, y: 0, rotate: 0, scale: 0.35 }}
           transition={spring}

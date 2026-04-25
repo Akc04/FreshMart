@@ -567,8 +567,8 @@ img { display: block; }
 .floating-cart-btn:hover { background: var(--green-600); transform: translateY(-2px); }
 
 /* ── Interactive Hero Graphics ────────────────────────────────────────────── */
-.interactive-hero-graphics { position: absolute; top: 0; right: 0; width: 600px; height: 100%; z-index: 1; display: flex; align-items: flex-end; justify-content: center; gap: 60px; padding-bottom: 20px; cursor: pointer; }
-.graphics-group { position: relative; display: flex; align-items: flex-end; justify-content: center; }
+.interactive-hero-graphics { position: absolute; top: 0; right: 0; width: 750px; height: 100%; z-index: 1; display: flex; align-items: flex-end; justify-content: center; gap: 80px; padding-bottom: 20px; cursor: pointer; pointer-events: auto; }
+.graphics-group { position: relative; display: flex; align-items: flex-end; justify-content: center; padding: 20px; }
 .container-emoji { font-size: 15rem; line-height: 1; position: relative; z-index: 2; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2)); user-select: none; }
 .contained-item { position: absolute; width: 90px; z-index: 1; bottom: 30px; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.3)); pointer-events: none; }
 @media (max-width: 768px) { .interactive-hero-graphics { display: none; } }
