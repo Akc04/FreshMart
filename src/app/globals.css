@@ -577,6 +577,13 @@ img { display: block; }
 .falling-tag { pointer-events: none; opacity: 0.6; }
 .gift-group { cursor: pointer; }
 
+.deals-hero {
+  background: linear-gradient(135deg, #dc2626 0%, #ea580c 50%, #d97706 100%) !important;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .navbar-inner {
     padding: 0 12px;

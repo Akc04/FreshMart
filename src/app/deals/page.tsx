@@ -74,7 +74,7 @@ export default function DealsPage() {
   return (
     <div className="page-wrapper">
       {/* Header */}
-      <section className="hero" style={{ background: 'linear-gradient(135deg, #dc2626 0%, #ea580c 50%, #d97706 100%)', marginBottom: 40, position: 'relative', overflow: 'hidden' }}>
+      <section className="hero deals-hero">
         <DealsHeroAnimations />
         <div className="hero-content">
           <div className="hero-pill"><Tag size={13} /> Limited Time Offers</div>
