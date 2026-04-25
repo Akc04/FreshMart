@@ -571,4 +571,10 @@ img { display: block; }
 .graphics-group { position: relative; display: flex; align-items: flex-end; justify-content: center; padding: 20px; }
 .container-emoji { font-size: 15rem; line-height: 1; position: relative; z-index: 2; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.2)); user-select: none; }
 .contained-item { position: absolute; width: 90px; z-index: 1; bottom: 30px; filter: drop-shadow(0 15px 25px rgba(0,0,0,0.3)); pointer-events: none; }
-@media (max-width: 768px) { .interactive-hero-graphics { display: none; } }
+
+/* ── Deals Page Animations ────────────────────────────────────────────────── */
+.deals-hero-graphics { position: absolute; top: 0; right: 0; width: 500px; height: 100%; z-index: 0; pointer-events: auto; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 20px; }
+.falling-tag { pointer-events: none; opacity: 0.15; }
+.gift-group { cursor: pointer; }
+
+@media (max-width: 768px) { .interactive-hero-graphics, .deals-hero-graphics { display: none; } }
