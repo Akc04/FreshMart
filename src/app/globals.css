@@ -578,6 +578,29 @@ img { display: block; }
 .gift-group { cursor: pointer; }
 
 @media (max-width: 768px) {
+  .navbar-inner {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .nav-links {
+    gap: 12px;
+  }
+  .logo {
+    font-size: 1.1rem;
+    gap: 4px;
+  }
+  .cart-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    gap: 4px;
+  }
+  .cart-btn span {
+    display: none; /* Hide "Cart" text on small screens to save space */
+  }
+  .cart-btn svg {
+    margin-right: 0;
+  }
+  
   .hero { 
     display: flex;
     flex-direction: column;
