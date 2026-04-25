@@ -588,36 +588,48 @@ img { display: block; }
 
 .nav-actions { display: flex; align-items: center; gap: 24px; }
 
+.navbar-grid {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0 24px;
+}
+.navbar-col-right-combined {
+  display: flex !important;
+  align-items: center !important;
+  gap: 24px;
+}
+.wishlist-btn-text {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--slate-600);
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+}
+
 @media (max-width: 768px) {
   .navbar-grid {
-    display: grid !important;
-    grid-template-columns: auto 1fr auto !important;
-    align-items: center !important;
-    padding: 0 8px !important;
-    gap: 4px !important;
+    padding: 0 10px !important;
   }
-  .nav-links {
-    gap: 4px !important;
-    display: flex !important;
-    justify-content: center !important;
+  .navbar-col-right-combined {
+    gap: 8px !important; /* Even spacing between all buttons */
   }
-  .nav-actions {
-    gap: 16px !important;
-    display: flex !important;
-    padding-left: 4px !important;
-  }
-  .logo span { display: none !important; } 
+  .logo span { display: none !important; }
   .logo { font-size: 1.4rem !important; }
   
-  .cart-btn span { display: block !important; }
-  .cart-btn { 
-    padding: 6px 10px !important; 
-    width: auto !important; 
-    height: 36px !important; 
-    font-size: 0.75rem !important;
-    gap: 4px !important;
+  .wishlist-text, .cart-btn span { 
+    display: block !important; 
+    font-size: 0.65rem !important;
   }
-  .nav-link { font-size: 0.75rem !important; }
+  .nav-link, .wishlist-btn-text, .cart-btn {
+    font-size: 0.65rem !important;
+    gap: 3px !important;
+  }
+  .cart-btn {
+    padding: 4px 6px !important;
+  }
   
   .deals-nav-link {
     padding: 4px 6px !important;

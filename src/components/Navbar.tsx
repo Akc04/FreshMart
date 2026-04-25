@@ -18,34 +18,29 @@ export default function Navbar() {
           </Link>
         </div>
 
-        <div className="navbar-col-center">
-          <div className="nav-links">
-            <Link href="/" className="nav-link">Shop</Link>
-            <Link href="/deals" className="nav-link deals-nav-link" id="nav-deals">
-              <span className="deals-emoji">🔥</span>
-              Deals
-            </Link>
-            <Link href="/orders" className="nav-link">Orders</Link>
-          </div>
-        </div>
+        <div className="navbar-col-right-combined">
+          <Link href="/" className="nav-link">Shop</Link>
+          <Link href="/deals" className="nav-link deals-nav-link" id="nav-deals">
+            <span className="deals-emoji">🔥</span>
+            Deals
+          </Link>
+          <Link href="/orders" className="nav-link">Orders</Link>
 
-        <div className="navbar-col-right">
-          <div className="nav-actions">
-            <Link href="/wishlist" className="nav-icon-btn" id="nav-wishlist" aria-label="Wishlist">
-              <Heart size={20} />
-              {wishlist.length > 0 && (
-                <span className="cart-badge">{wishlist.length}</span>
-              )}
-            </Link>
+          <Link href="/wishlist" className="nav-icon-btn wishlist-btn-text" id="nav-wishlist" aria-label="Wishlist">
+            <Heart size={20} />
+            <span className="wishlist-text">Wishlist</span>
+            {wishlist.length > 0 && (
+              <span className="cart-badge">{wishlist.length}</span>
+            )}
+          </Link>
 
-            <Link href="/cart" className="cart-btn" id="nav-cart" aria-label="Shopping Cart">
-              <ShoppingCart size={20} />
-              <span>Cart</span>
-              {totalItems > 0 && (
-                <span className="cart-badge">{totalItems}</span>
-              )}
-            </Link>
-          </div>
+          <Link href="/cart" className="cart-btn" id="nav-cart" aria-label="Shopping Cart">
+            <ShoppingCart size={20} />
+            <span>Cart</span>
+            {totalItems > 0 && (
+              <span className="cart-badge">{totalItems}</span>
+            )}
+          </Link>
         </div>
       </div>
     </nav>
