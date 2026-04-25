@@ -597,16 +597,31 @@ img { display: block; }
 .navbar-col-right-combined {
   display: flex !important;
   align-items: center !important;
-  gap: 24px;
+  gap: 32px; /* Standardized gap for PC */
 }
-.wishlist-btn-text {
+.wishlist-btn-text, .cart-btn-pc {
   display: flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   color: var(--slate-600);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
-  position: relative;
+  transition: color var(--transition);
+}
+.wishlist-btn-text:hover, .cart-btn-pc:hover {
+  color: var(--green-600);
+}
+/* Re-style existing cart-btn for consistent PC look if it's not mobile */
+@media (min-width: 769px) {
+  .cart-btn {
+    background: transparent !important;
+    color: var(--slate-600) !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+  }
+  .cart-btn:hover { color: var(--green-600) !important; transform: none !important; }
 }
 
 @media (max-width: 768px) {
