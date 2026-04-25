@@ -588,37 +588,30 @@ img { display: block; }
   overflow: hidden;
 }
 
+.nav-actions { display: flex; align-items: center; gap: 24px; }
+
 @media (max-width: 768px) {
-  .navbar-inner {
-    padding: 0 16px;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 10px;
+  .navbar-grid {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    align-items: center !important;
+    padding: 0 10px !important;
   }
-  .nav-links {
-    display: contents; /* Allows children to be grid items of navbar-inner */
+  .navbar-col-left { justify-self: start; }
+  .navbar-col-center { justify-self: center; }
+  .navbar-col-right { justify-self: end; }
+
+  .nav-links, .nav-actions {
+    gap: 8px !important;
   }
-  .logo {
-    grid-column: 1;
-    font-size: 1.1rem;
-    gap: 4px;
-    white-space: nowrap;
-  }
-  .nav-links > a:not(.cart-btn):not(.nav-icon-btn) {
-    grid-column: 2;
-    justify-self: center;
-    font-size: 0.85rem;
-  }
-  #nav-wishlist {
-    display: none; /* Hide wishlist in main navbar on mobile to save space */
-  }
-  .cart-btn {
-    grid-column: 3;
-    padding: 6px 12px;
-    font-size: 0.8rem;
-    width: fit-content;
-    justify-self: end;
+  .logo span { display: none; } /* Show only leaf on very small screens */
+  .logo { font-size: 1.2rem; }
+  
+  .cart-btn span { display: none; }
+  .nav-link { font-size: 0.8rem; }
+  
+  .deals-nav-link {
+    padding: 4px 8px !important;
   }
   
   .hero { 
