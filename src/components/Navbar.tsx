@@ -18,8 +18,8 @@ export default function Navbar() {
 
         <div className="nav-links">
           <Link href="/" className="nav-link">Shop</Link>
-          <Link href="/deals" className="nav-link">
-            <span style={{ fontSize: '1.1em', marginRight: '4px', display: 'inline-block' }}>🔥</span>
+          <Link href="/deals" className="nav-link deals-nav-link" id="nav-deals">
+            <span className="deals-emoji">🔥</span>
             Deals
           </Link>
           <Link href="/orders" className="nav-link">Orders</Link>

@@ -638,4 +638,23 @@ img { display: block; }
   }
   .container-emoji { font-size: 6rem !important; }
   .contained-item { width: 40px !important; bottom: 15px !important; }
+
+  .deals-nav-link {
+    position: relative;
+    padding: 6px 12px !important;
+    background: rgba(239, 68, 68, 0.1); /* Subtle red background */
+    border-radius: 100px;
+    color: #ef4444 !important;
+    overflow: hidden;
+  }
+  .deals-emoji {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    font-size: 1.8rem !important;
+    opacity: 0.2 !important;
+    z-index: 0;
+    pointer-events: none;
+  }
 }
