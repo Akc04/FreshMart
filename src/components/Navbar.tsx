@@ -40,6 +40,7 @@ export default function Navbar() {
 
             <Link href="/cart" className="cart-btn" id="nav-cart" aria-label="Shopping Cart">
               <ShoppingCart size={20} />
+              <span>Cart</span>
               {totalItems > 0 && (
                 <span className="cart-badge">{totalItems}</span>
               )}
