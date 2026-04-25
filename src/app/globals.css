@@ -602,16 +602,17 @@ img { display: block; }
   .navbar-col-right { justify-self: end; }
 
   .nav-links, .nav-actions {
-    gap: 8px !important;
+    gap: 10px !important;
   }
-  .logo span { display: none; } /* Show only leaf on very small screens */
-  .logo { font-size: 1.2rem; }
+  .logo span { display: block !important; } 
+  .logo { font-size: 1rem !important; }
   
-  .cart-btn span { display: none; }
-  .nav-link { font-size: 0.8rem; }
+  .cart-btn span { display: block !important; }
+  .cart-btn { padding: 4px 10px !important; font-size: 0.75rem !important; }
+  .nav-link { font-size: 0.75rem !important; }
   
   .deals-nav-link {
-    padding: 4px 8px !important;
+    padding: 4px 6px !important;
   }
   
   .hero { 
