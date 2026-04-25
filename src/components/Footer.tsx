@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-social">
-          <a href="https://github.com/Akc04/grocery-app" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub</a>
+          <a href="https://github.com/Akc04/FreshMart" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub</a>
         </div>
       </div>
       <div className="footer-bottom">
