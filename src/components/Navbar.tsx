@@ -19,14 +19,14 @@ export default function Navbar() {
         </div>
 
         <div className="navbar-col-right-combined">
-          <Link href="/" className="nav-link">Shop</Link>
+          <Link href="/" className="nav-link pill-nav-link" id="nav-shop">Shop</Link>
           <Link href="/deals" className="nav-link deals-nav-link" id="nav-deals">
             <span className="deals-emoji">🔥</span>
             Deals
           </Link>
-          <Link href="/orders" className="nav-link">Orders</Link>
+          <Link href="/orders" className="nav-link pill-nav-link" id="nav-orders">Orders</Link>
 
-          <Link href="/wishlist" className="nav-icon-btn wishlist-btn-text" id="nav-wishlist" aria-label="Wishlist">
+          <Link href="/wishlist" className="nav-icon-btn wishlist-btn-text pill-nav-link" id="nav-wishlist" aria-label="Wishlist">
             <Heart size={20} />
             <span className="wishlist-text">Wishlist</span>
             {wishlist.length > 0 && (
@@ -34,7 +34,7 @@ export default function Navbar() {
             )}
           </Link>
 
-          <Link href="/cart" className="cart-btn" id="nav-cart" aria-label="Shopping Cart">
+          <Link href="/cart" className="cart-btn pill-nav-link" id="nav-cart" aria-label="Shopping Cart">
             <ShoppingCart size={20} />
             <span>Cart</span>
             {totalItems > 0 && (
