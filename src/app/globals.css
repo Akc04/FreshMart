@@ -98,6 +98,9 @@ img { display: block; }
   font-weight: 500;
   color: var(--slate-600);
   transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .nav-link:hover { color: var(--green-600); }
 
