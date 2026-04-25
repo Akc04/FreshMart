@@ -577,4 +577,22 @@ img { display: block; }
 .falling-tag { pointer-events: none; opacity: 0.6; }
 .gift-group { cursor: pointer; }
 
-@media (max-width: 768px) { .interactive-hero-graphics, .deals-hero-graphics { display: none; } }
+@media (max-width: 768px) {
+  .interactive-hero-graphics, .deals-hero-graphics { 
+    width: 100%;
+    right: 0;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 10px;
+    opacity: 0.8;
+  }
+  .container-emoji { font-size: 8rem; }
+  .contained-item { width: 50px; bottom: 20px; }
+  
+  /* Make room for text on mobile if needed */
+  .hero { 
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 140px; /* Space for graphics at bottom */
+  }
+}
