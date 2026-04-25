@@ -608,16 +608,16 @@ img { display: block; }
 #nav-deals { background: rgba(239, 68, 68, 0.1) !important; color: #dc2626 !important; }
 #nav-orders { background: rgba(59, 130, 246, 0.1) !important; color: #2563eb !important; }
 #nav-wishlist { background: rgba(236, 72, 153, 0.1) !important; color: #db2777 !important; }
-#nav-cart { background: rgba(139, 92, 246, 0.1) !important; color: #7c3aed !important; }
+#nav-cart { background: var(--green-600) !important; color: #fff !important; box-shadow: 0 4px 12px rgba(22,163,74,0.2) !important; }
 
 .pill-nav-link:hover { transform: translateY(-2px); filter: brightness(0.95); }
+#nav-cart:hover { background: var(--green-700) !important; box-shadow: 0 6px 16px rgba(22,163,74,0.3) !important; }
 
 @media (min-width: 769px) {
   .cart-btn {
-    background: rgba(139, 92, 246, 0.1) !important;
-    color: #7c3aed !important;
-    box-shadow: none !important;
-    padding: 8px 16px !important;
+    background: var(--green-600) !important;
+    color: #fff !important;
+    padding: 8px 18px !important;
     font-size: 0.95rem !important;
   }
 }
