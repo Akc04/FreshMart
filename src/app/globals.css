@@ -578,21 +578,30 @@ img { display: block; }
 .gift-group { cursor: pointer; }
 
 @media (max-width: 768px) {
-  .interactive-hero-graphics, .deals-hero-graphics { 
-    width: 100%;
-    right: 0;
-    justify-content: center;
-    gap: 20px;
-    padding-bottom: 10px;
-    opacity: 0.8;
-  }
-  .container-emoji { font-size: 8rem; }
-  .contained-item { width: 50px; bottom: 20px; }
-  
-  /* Make room for text on mobile if needed */
   .hero { 
     display: flex;
     flex-direction: column;
-    padding-bottom: 140px; /* Space for graphics at bottom */
+    padding: 40px 20px 20px !important;
+    text-align: center;
+    align-items: center;
   }
+  .hero-content {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .interactive-hero-graphics, .deals-hero-graphics { 
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    top: auto !important;
+    right: auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    padding: 20px 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .container-emoji { font-size: 6rem !important; }
+  .contained-item { width: 40px !important; bottom: 15px !important; }
 }
